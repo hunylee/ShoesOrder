@@ -1,0 +1,107 @@
+// Prisma Schema for Japanese Running Shoes Platform
+// 일본 러닝화 해외 구매 대행 플랫폼
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// 상품 모델
+model Product {
+  id               String   @id @default(cuid())
+  brand            String
+  brandKr          String
+  name             String
+  nameJp           String
+  description      String
+  priceJpy         Int
+  priceKrw         Int
+  commission       Int      @default(15000)
+  isLimitedEdition Boolean  @default(false)
+  isWideWidth      Boolean  @default(false)
+  sizes            String[]
+  colors           String[]
+  japanExclusive   Boolean  @default(false)
+  category         String   // stability, neutral, racing
+  rating           Float    @default(0)
+  reviews          Int      @default(0)
+  imageUrl         String?
+  tags             String[]
+  sourceUrl        String?
+  sourcePlatform   String?  // rakuten, yahoo, amazon, mercari
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  orderItems OrderItem[]
+
+  @@index([brand])
+  @@index([category])
+  @@index([sourcePlatform])
+}
+
+// 크롤링 로그 모델
+model CrawlLog {
+  id         String   @id @default(cuid())
+  platform   String   // rakuten, yahoo, amazon, mercari
+  keyword    String?
+  status     String   // success, failed, running
+  itemsFound Int      @default(0)
+  errorMsg   String?
+  duration   Int?     // milliseconds
+  createdAt  DateTime @default(now())
+
+  @@index([platform])
+  @@index([status])
+}
+
+// 주문 모델
+model Order {
+  id          String      @id @default(cuid())
+  orderNumber String      @unique @default(cuid())
+  customerName    String?
+  customerEmail   String?
+  customerPhone   String?
+  shippingAddress String?
+  totalPrice  Int
+  status      String      @default("pending") // pending, processing, shipped, delivered, cancelled
+  notes       String?
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  items OrderItem[]
+
+  @@index([status])
+  @@index([orderNumber])
+}
+
+// 주문 아이템 모델
+model OrderItem {
+  id        String  @id @default(cuid())
+  orderId   String
+  productId String
+  size      String
+  color     String?
+  quantity  Int     @default(1)
+  priceKrw  Int
+  commission Int
+
+  order   Order   @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  product Product @relation(fields: [productId], references: [id])
+
+  @@index([orderId])
+  @@index([productId])
+}
+
+// 환율 정보 모델
+model ExchangeRate {
+  id          String   @id @default(cuid())
+  fromCurrency String  @default("JPY")
+  toCurrency   String  @default("KRW")
+  rate        Float
+  createdAt   DateTime @default(now())
+
+  @@index([createdAt])
+}

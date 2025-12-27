@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="일본 러닝화 해외 구매 대행 플랫폼 - 아식스, 뉴발란스, 미즈노 등 한정판 및 발볼 넓은 러닝화 전문">
+  <meta name="keywords" content="일본 러닝화, 아식스, 뉴발란스, 미즈노, 해외구매대행, 한정판, 발볼넓은">
+  <title>🏃 일본 러닝화 해외 구매 대행 | Japan Running Shoes</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-content">
+      <a href="/" class="logo">
+        <span class="logo-icon">🏃</span>
+        <div>
+          <div class="logo-text">Japan Running</div>
+          <div class="logo-sub">일본 러닝화 전문</div>
+        </div>
+      </a>
+      
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="브랜드, 상품명, 태그로 검색...">
+        <button type="button">🔍</button>
+      </div>
+      
+      <div class="header-actions">
+        <button class="cart-btn" id="cartBtn">
+          🛒 장바구니
+          <span class="cart-badge" id="cartBadge" style="display: none;">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1>🇯🇵 일본 러닝화 해외 구매 대행</h1>
+        <p>아식스, 뉴발란스, 미즈노 등 일본 현지 한정판과 발볼 넓은 프리미엄 러닝화를 만나보세요.</p>
+        
+        <div class="stats">
+          <div class="stat-item">
+            <div class="stat-value" id="totalProducts">0</div>
+            <div class="stat-label">전체 상품</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="limitedProducts">0</div>
+            <div class="stat-label">한정판</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="wideProducts">0</div>
+            <div class="stat-label">발볼 넓은</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="filters-section">
+      <div class="container">
+        <div class="filter-row">
+          <!-- Brand Filters -->
+          <div class="filter-group">
+            <button class="filter-btn brand-filter active" data-brand="all">
+              <span class="icon">🏷️</span> 전체
+            </button>
+            <button class="filter-btn brand-filter" data-brand="ASICS">
+              <span class="icon">⚡</span> 아식스
+            </button>
+            <button class="filter-btn brand-filter" data-brand="New Balance">
+              <span class="icon">🎯</span> 뉴발란스
+            </button>
+            <button class="filter-btn brand-filter" data-brand="Mizuno">
+              <span class="icon">🌊</span> 미즈노
+            </button>
+            <button class="filter-btn brand-filter" data-brand="Saucony">
+              <span class="icon">💨</span> 써코니
+            </button>
+          </div>
+
+          <!-- Special Filters -->
+          <div class="filter-group">
+            <button class="filter-btn limited" id="limitedFilter">
+              <span class="icon">🔥</span> 한정판
+            </button>
+            <button class="filter-btn wide" id="wideFilter">
+              <span class="icon">👟</span> 발볼 넓은
+            </button>
+          </div>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="filter-row" style="margin-top: 16px;">
+          <div class="filter-group">
+            <button class="filter-btn category-filter active" data-category="all">
+              <span class="icon">🏃</span> 전체
+            </button>
+            <button class="filter-btn category-filter" data-category="stability">
+              <span class="icon">⚡</span> 안정성
+            </button>
+            <button class="filter-btn category-filter" data-category="neutral">
+              <span class="icon">🎯</span> 뉴트럴
+            </button>
+            <button class="filter-btn category-filter" data-category="racing">
+              <span class="icon">🏆</span> 레이싱
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">🏃 러닝화 컬렉션</h2>
+          <span class="product-count" id="productCount">0개의 상품</span>
+        </div>
+
+        <div class="products-grid" id="productsGrid">
+          <!-- Products will be rendered here -->
+          <div class="loading">
+            <div class="spinner"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <span class="logo-icon">🏃</span>
+            <div>
+              <div class="logo-text">Japan Running</div>
+              <div class="logo-sub">일본 러닝화 전문</div>
+            </div>
+          </a>
+          <p>일본 현지의 프리미엄 러닝화를 합리적인 가격에 만나보세요. 한정판과 발볼 넓은 제품을 전문으로 취급합니다.</p>
+        </div>
+        
+        <div class="footer-column">
+          <h4>브랜드</h4>
+          <ul>
+            <li><a href="#">아식스 (ASICS)</a></li>
+            <li><a href="#">뉴발란스 (New Balance)</a></li>
+            <li><a href="#">미즈노 (Mizuno)</a></li>
+            <li><a href="#">써코니 (Saucony)</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>카테고리</h4>
+          <ul>
+            <li><a href="#">한정판</a></li>
+            <li><a href="#">발볼 넓은 러닝화</a></li>
+            <li><a href="#">레이싱 슈즈</a></li>
+            <li><a href="#">안정성 러닝화</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>고객지원</h4>
+          <ul>
+            <li><a href="#">구매대행 안내</a></li>
+            <li><a href="#">배송/반품 정책</a></li>
+            <li><a href="#">사이즈 가이드</a></li>
+            <li><a href="#">자주 묻는 질문</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2024 Japan Running. All rights reserved. | 일본 러닝화 해외 구매 대행 플랫폼</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>상품 상세</h3>
+        <button class="modal-close" id="closeModal">✕</button>
+      </div>
+      <div class="modal-body" id="modalContent">
+        <!-- Modal content will be rendered here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Scripts -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
