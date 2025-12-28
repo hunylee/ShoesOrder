@@ -26,8 +26,8 @@ export default function Header({ cartCount, onSearch, onCartClick }: HeaderProps
                 <a href="/" className="logo">
                     <span className="logo-icon">🏃</span>
                     <div>
-                        <div className="logo-text">Japan Running</div>
-                        <div className="logo-sub">일본 러닝화 전문</div>
+                        <div className="logo-text">japanguru</div>
+                        <div className="logo-sub">일본 러닝화 구매대행</div>
                     </div>
                 </a>
 

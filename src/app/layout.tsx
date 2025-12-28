@@ -5,9 +5,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "🏃 일본 러닝화 해외 구매 대행 | Japan Running Shoes",
-  description: "일본 러닝화 해외 구매 대행 플랫폼 - 아식스, 뉴발란스, 미즈노 등 한정판 및 발볼 넓은 러닝화 전문",
-  keywords: "일본 러닝화, 아식스, 뉴발란스, 미즈노, 해외구매대행, 한정판, 발볼넓은",
+  title: "🏃 japanguru | 일본 러닝화 구매대행",
+  description: "japanguru - 일본 러닝화 해외 구매 대행 플랫폼. 아식스, 뉴발란스, 미즈노 등 한정판 및 발볼 넓은 러닝화 전문",
+  keywords: "japanguru, 일본 러닝화, 아식스, 뉴발란스, 미즈노, 해외구매대행, 한정판, 발볼넓은",
 };
 
 export default function RootLayout({
@@ -22,7 +22,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
       </head>
-      <body>
+      <body suppressHydrationWarning>
         {children}
       </body>
     </html>
