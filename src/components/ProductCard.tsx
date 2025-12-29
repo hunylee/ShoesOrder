@@ -3,6 +3,7 @@
 
 'use client';
 
+import React from 'react';
 import { Product } from '@/types';
 
 interface ProductCardProps {
@@ -11,7 +12,7 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({ product, onClick }: ProductCardProps) {
-    const badges: JSX.Element[] = [];
+    const badges: React.JSX.Element[] = [];
 
     if (product.isLimitedEdition) {
         badges.push(<span key="limited" className="badge badge-limited">한정판</span>);

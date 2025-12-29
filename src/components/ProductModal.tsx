@@ -3,7 +3,7 @@
 
 'use client';
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Product } from '@/types';
 
 interface ProductModalProps {
@@ -18,7 +18,7 @@ export default function ProductModal({ product, isOpen, onClose, onAddToCart }: 
 
     if (!product) return null;
 
-    const badges: JSX.Element[] = [];
+    const badges: React.JSX.Element[] = [];
     if (product.isLimitedEdition) {
         badges.push(<span key="limited" className="badge badge-limited">한정판</span>);
     }
