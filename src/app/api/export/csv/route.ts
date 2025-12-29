@@ -4,9 +4,30 @@
 import { NextResponse } from 'next/server';
 import { Product } from '@/types';
 
+// CSV 설정 옵션
+interface CSVOptions {
+    deliveryFeeType: 'FREE' | 'PAID' | 'CONDITIONAL_FREE';
+    deliveryFee: number;
+    conditionalFreeAmount: number;
+    returnShippingFee: number;
+    origin: string;
+    asPhone: string;
+    asGuide: string;
+}
+
+const DEFAULT_OPTIONS: CSVOptions = {
+    deliveryFeeType: 'CONDITIONAL_FREE',
+    deliveryFee: 3000,
+    conditionalFreeAmount: 50000,
+    returnShippingFee: 5000,
+    origin: '일본',
+    asPhone: '02-1234-5678',
+    asGuide: '상품 수령 후 7일 이내 교환/반품 가능합니다. 해외 구매대행 상품 특성상 단순 변심에 의한 교환/반품 시 왕복 배송비가 발생합니다.',
+};
+
 // 윈들리 CSV 형식으로 상품 변환
-function convertToWindlyCSV(products: Product[]): string {
-    // 윈들리 CSV 헤더 (스마트스토어 대량등록 양식 기준)
+function convertToWindlyCSV(products: Product[], options: CSVOptions = DEFAULT_OPTIONS): string {
+    // 윈들리 CSV 헤더 (스마트스토어 대량등록 양식 기준 - 확장)
     const headers = [
         '상품명',
         '판매가',
@@ -14,6 +35,13 @@ function convertToWindlyCSV(products: Product[]): string {
         '카테고리',
         '브랜드',
         '상품상태',
+        '배송비유형',
+        '배송비',
+        '조건부무료금액',
+        '반품배송비',
+        '원산지',
+        'AS전화번호',
+        'AS안내',
         '상세설명',
         '대표이미지URL',
         '옵션1명',
@@ -45,6 +73,10 @@ function convertToWindlyCSV(products: Product[]): string {
             product.category === 'neutral' ? '뉴트럴 러닝화' :
                 product.category === 'racing' ? '레이싱 슈즈' : '러닝화';
 
+        // 배송비 유형 매핑
+        const deliveryFeeTypeLabel = options.deliveryFeeType === 'FREE' ? '무료' :
+            options.deliveryFeeType === 'CONDITIONAL_FREE' ? '조건부무료' : '유료';
+
         return [
             productName,
             totalPrice,
@@ -52,6 +84,13 @@ function convertToWindlyCSV(products: Product[]): string {
             category,
             product.brand,
             '신상품',
+            deliveryFeeTypeLabel,
+            options.deliveryFee,
+            options.conditionalFreeAmount,
+            options.returnShippingFee,
+            options.origin,
+            options.asPhone,
+            options.asGuide,
             generateDescription(product),
             product.imageUrl || '',
             '사이즈',

@@ -1,0 +1,506 @@
+{
+  "cookies": [
+    {
+      "name": "cee",
+      "value": "g9OjHvomFfeeO4k7Y0qmSVb6D3jowXh8Me7IXqnDVAo%3D.%7B%7D",
+      "domain": ".signals.birch.events",
+      "path": "/events/4b07820bc0a61a39b460c63f1df8d8859aa27b0894ae9aa3982159593cfd71c0",
+      "expires": 1774801748.719591,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "NACT",
+      "value": "1",
+      "domain": ".naver.com",
+      "path": "/oauth2.0",
+      "expires": 1767112070.67363,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_fwb",
+      "value": "134PexVcVvDgoQyKK3y63Y4.1767025647795",
+      "domain": ".windly.cc",
+      "path": "/",
+      "expires": 1801585647.795106,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "NA_SAC",
+      "value": "dT1odHRwcyUzQSUyRiUyRnd3dy53aW5kbHkuY2MlMkZ8cj0=",
+      "domain": "www.windly.cc",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "wcs_bt",
+      "value": "s_1341444c07cf:1767025647",
+      "domain": "www.windly.cc",
+      "path": "/",
+      "expires": 1801585647.841926,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "NAC",
+      "value": "dV0KB4Aqd26J",
+      "domain": ".naver.com",
+      "path": "/",
+      "expires": 1801585748.400637,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "NWB",
+      "value": "a415daefcc1f37fc8947575baeccfed4.1767025647919",
+      "domain": ".wcs.naver.com",
+      "path": "/",
+      "expires": 1801585748.340456,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "CLID",
+      "value": "e08526d7f1fd4027aa89e2720815eb7e.20251229.20261229",
+      "domain": "www.clarity.ms",
+      "path": "/",
+      "expires": 1798561648.057408,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_ga",
+      "value": "GA1.1.1747391765.1767025648",
+      "domain": ".windly.cc",
+      "path": "/",
+      "expires": 1801585694.386476,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_clck",
+      "value": "16zs475%5E2%5Eg29%5E0%5E2189",
+      "domain": ".windly.cc",
+      "path": "/",
+      "expires": 1798561648,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "ar_debug",
+      "value": "1",
+      "domain": ".www.google-analytics.com",
+      "path": "/",
+      "expires": 1774801648.599522,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_fbp",
+      "value": "fb.1.1767025649075.733292125478649528",
+      "domain": ".windly.cc",
+      "path": "/",
+      "expires": 1774801755,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "MUID",
+      "value": "0445BC1272726C0E0BA9AAC373056DDE",
+      "domain": ".bing.com",
+      "path": "/",
+      "expires": 1800721650.583714,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "MR",
+      "value": "0",
+      "domain": ".c.bing.com",
+      "path": "/",
+      "expires": 1767630450.58379,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "SRM_B",
+      "value": "0445BC1272726C0E0BA9AAC373056DDE",
+      "domain": ".c.bing.com",
+      "path": "/",
+      "expires": 1800721650.58381,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "SM",
+      "value": "C",
+      "domain": ".c.clarity.ms",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "MUID",
+      "value": "0445BC1272726C0E0BA9AAC373056DDE",
+      "domain": ".clarity.ms",
+      "path": "/",
+      "expires": 1800721649.638488,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "MR",
+      "value": "0",
+      "domain": ".c.clarity.ms",
+      "path": "/",
+      "expires": 1767630449.638524,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "ANONCHK",
+      "value": "0",
+      "domain": ".c.clarity.ms",
+      "path": "/",
+      "expires": 1767026249.638539,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "x-veil-id",
+      "value": "5c735e1e-f68d-4f6e-8cf4-de28de328d02",
+      "domain": ".channel.io",
+      "path": "/",
+      "expires": 1798561748.602583,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "ch-veil-id",
+      "value": "5c735e1e-f68d-4f6e-8cf4-de28de328d02",
+      "domain": ".windly.cc",
+      "path": "/",
+      "expires": 1798561748.612062,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "nid_slevel",
+      "value": "1",
+      "domain": ".nid.naver.com",
+      "path": "/",
+      "expires": 1798561670,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "NNB",
+      "value": "B3B5R6IGVRJGS",
+      "domain": ".naver.com",
+      "path": "/",
+      "expires": 1801585680.497162,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "SRT30",
+      "value": "1767025670",
+      "domain": ".naver.com",
+      "path": "/",
+      "expires": 1767027480.497323,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "SRT5",
+      "value": "1767025670",
+      "domain": ".naver.com",
+      "path": "/",
+      "expires": 1767025980.497385,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "NID_JST",
+      "value": "dJkn0XDNif8E9oiuKu0bfPm9b+5O+lThzbEdeEA5tQnvDaeDXNT384rRxPoVqXSqvDsRMuX/m6e1mMCDHRpSPBu+Yh7dqx4mXwNyzMQULy4ekWQbprURgaQzuaoZcQy4oigtlpVkfkvdbNIzImtbRbw65HFFQCyPyZn+Y6iP0uw=",
+      "domain": ".nid.naver.com",
+      "path": "/",
+      "expires": 1784305680.403107,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "BUC",
+      "value": "LSBqoI7qosyZhVOPZ1uzAgqzkh-xjczluVFHeFvVgew=",
+      "domain": ".naver.com",
+      "path": "/",
+      "expires": 1801585680.497412,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "nid_inf",
+      "value": "1530030678",
+      "domain": ".naver.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "NID_AUT",
+      "value": "9dDjJ4LY9Wbh3Rd2165k7XROC6QX52I1l1Uu3AQITQSm2xYBSzP0i5lmk1TF2ZMm",
+      "domain": ".naver.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "NID_SES",
+      "value": "AAABv+rgjderVZutJzahP3ASXo8K6JycuCuPSB5y3lCFArNmIoxNG+0Zm0sl8Z4gVD2NyHpUgUfiNa5Br9yR6CFq87+MMR5nAQDXQoMpXHK9wdtOBB+giclB5Ot6+asW1a3bbZel+0n3/puvR5DxbbpJqLSo9EYJUyu1yiEwP/EcAQpKx5wPlTUBT8YTIrRluEzuEYRkj6gwZ9EqAdr1vgwS2ILgrGQm93lOTz6QVyWQdb1oajqgfVYh5cqzRy2FHXVREpfG3/j9ZrKzkVwWaYmnbmJy1S7dk2aP4mCiG7FO/CgNSabn3wzfv9PqaBMPG54CSBOP0FbOTB7QtHiMuupbgwkjlLiadtt3tlW+MxBgfIMF1PaDGxv/n4Y4U1iKft3btz+E3drgyyJvZIQIfoRZKSTk1WyIBvV719gX+aU04jtNR3ropZZkMoIKihu6iGZuzZhlLIHuNCyfgv+ctjOVtm0ypfw+ca+nyifv/VJpRfVMy7PX6+wt8cOheldSJ5vNnUEYj/uEL/Pprt7CowheS+8GV2PvbIOPfcGMXGtY9/3J333TlLPkqZEvrISdF+4vSn1KA9k8p1xf2OL2mrNsVjU=",
+      "domain": ".naver.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "windly_access_token",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IndpbmRseSJ9.eyJpZCI6Ijc4OTk2Iiwicm9sZSI6Ik9XTkVSIiwidXNlck51bWJlciI6IllZNDUwMjQ3Iiwic2lnbnVwTWV0aG9kIjoiTkFWRVIiLCJlbWFpbCI6Imh1bnlsZWVAbmF2ZXIuY29tIiwiaXNTdGFmZiI6ZmFsc2UsImlzUGFydG5lciI6ZmFsc2UsImFjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyNS0xMi0xNlQxODowMDo0My4xODc4MTJaIiwic2Vzc2lvblRva2VuIjoiZTI5NWUyNmJjODkyMjkyMyIsImlhdCI6MTc2NzAyNTY5MywiZXhwIjoxNzY3MDI1OTkzfQ.rDKRDZm4MDWFTKswEXj_jOs2gv-YASDvoeBtqyNdYcA",
+      "domain": ".windly.cc",
+      "path": "/",
+      "expires": 1767630493,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "IDE",
+      "value": "AHWqTUkFUp8Ncr1bwMS8gQxe2US3e2MxlZFJARBKbAP13s06enwasLhofNpwt2FI",
+      "domain": ".doubleclick.net",
+      "path": "/",
+      "expires": 1801585694.539332,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_clsk",
+      "value": "vpaf6n%5E1767025694986%5E4%5E1%5Ee.clarity.ms%2Fcollect",
+      "domain": ".windly.cc",
+      "path": "/",
+      "expires": 1767112094,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga_HGN9VWVBM4",
+      "value": "GS2.1.s1767025648$o1$g1$t1767025747$j60$l1$h113406614",
+      "domain": ".windly.cc",
+      "path": "/",
+      "expires": 1801585747.756366,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_gcl_au",
+      "value": "1.1.942763181.1767025648.498179059.1767025694.1767025747",
+      "domain": ".windly.cc",
+      "path": "/",
+      "expires": 1774801648,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "mp_2718e1c7174899db61c84b010ef0c28e_mixpanel",
+      "value": "%7B%22distinct_id%22%3A%2278996%22%2C%22%24device_id%22%3A%2219b6aefa0e58d-0fafa283f42878-26061a51-384000-19b6aefa0e58d%22%2C%22%24initial_referrer%22%3A%22%24direct%22%2C%22%24initial_referring_domain%22%3A%22%24direct%22%2C%22__mps%22%3A%7B%7D%2C%22__mpso%22%3A%7B%22%24initial_referrer%22%3A%22%24direct%22%2C%22%24initial_referring_domain%22%3A%22%24direct%22%7D%2C%22__mpus%22%3A%7B%7D%2C%22__mpa%22%3A%7B%7D%2C%22__mpu%22%3A%7B%7D%2C%22__mpr%22%3A%5B%5D%2C%22__mpap%22%3A%5B%5D%2C%22%24user_id%22%3A%2278996%22%7D",
+      "domain": ".windly.cc",
+      "path": "/",
+      "expires": 1798561748,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_fwb",
+      "value": "134PexVcVvDgoQyKK3y63Y4.1767025647795",
+      "domain": ".global.windly.cc",
+      "path": "/",
+      "expires": 1801585748.315417,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "wcs_bt",
+      "value": "unknown:1767025748",
+      "domain": "global.windly.cc",
+      "path": "/",
+      "expires": 1801585748.317091,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "ch-session-58216",
+      "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXMiLCJleHAiOjE3Njk2MTc3NDgsImlhdCI6MTc2NzAyNTc0OCwia2V5IjoiNTgyMTYtNjk0MTllM2Q4YmM1OGVlZWIyMmMifQ.6Qsts0t9QZ588WD108Rc4MQ1nhL1tJ36l6aa1qOePXU",
+      "domain": ".windly.cc",
+      "path": "/",
+      "expires": 1767027548.612235,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "NID",
+      "value": "527=dtMfF3mn-u-jAl81fzBB_8H4IFTCCuyAsoYMbBvSj-hRnWcyxTiVr1gJ-2uA-stJzKmXJEeRHCDnNTpmodD93ZbUaj0OhGo7ZbZRpqNRVKAHMwh-24VjD98xAU2OCwDkwP_91jfSLIQi3FiF3Wtvry9rKyD-7261YFEhRRAwZFL4dElvC4mLsQYB3vEu-ClWDVYEATWBh6Vb",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1782836955.388565,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_ga",
+      "value": "GA1.1.1789358099.1767025757",
+      "domain": ".chromewebstore.google.com",
+      "path": "/",
+      "expires": 1801585763.884645,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "OTZ",
+      "value": "8412029_20_20__20_",
+      "domain": "chromewebstore.google.com",
+      "path": "/",
+      "expires": 1769617757,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Secure-YNID",
+      "value": "14.YT=XkKOxsqdCKr9XNKbpnBz5jrvvJX_s2eKN9FAGkyGBEoezszxsO2TM151xIEfpYmNZ9m5T-jN3VsAdzhAECtG9l_OwdR--CLTxAauI3ELGCBa91LJ5Vcrn2L3hA9MQe-Wabb2UV42NzTiUFuauMLviELmiGb_K9Xuxgt94I3VzI2qOiyfdSWHOtOlAlfB9zabrnnoxzMtmpGXAxTp53qk16ItEwOf-BP7urYbR1qkbxIbvP-lBOlFgZh1UTVuRDa6dESh2TfHEs81C6ZhmmmmzM1M-rY4HHb4N47ih8Iy4mlZcFi99iz_-Bn-uee11WD8KIudVvKRhYKfUZ0hmsvw2A",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1782577759.146316,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "YSC",
+      "value": "D6WwiVTyM-I",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "VISITOR_INFO1_LIVE",
+      "value": "rXgjjWByNuA",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1782577759.146411,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "VISITOR_PRIVACY_METADATA",
+      "value": "CgJLUhIEGgAgLw%3D%3D",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1782577759.146431,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "__Secure-ROLLOUT_TOKEN",
+      "value": "CNKw6qT3yPik2QEQzcu29ZvjkQMYzcu29ZvjkQM%3D",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1782577759.146454,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "iid",
+      "value": "%7BD839F325-3424-3F3E-85C3-BDF8552BCE01%7D",
+      "domain": "www.google.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga_GDHFYGVLZJ",
+      "value": "GS2.1.s1767025757$o1$g1$t1767025763$j54$l0$h0",
+      "domain": ".chromewebstore.google.com",
+      "path": "/",
+      "expires": 1801585763.884258,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga_KHZNC1Q6K0",
+      "value": "GS2.1.s1767025757$o1$g1$t1767025768$j49$l0$h0",
+      "domain": ".chromewebstore.google.com",
+      "path": "/",
+      "expires": 1801585768.933174,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "savedAt": "2025-12-29T16:30:05.152Z",
+  "account": "hunylee@naver.com"
+}

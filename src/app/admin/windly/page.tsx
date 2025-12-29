@@ -99,6 +99,9 @@ export default function WindlyPage() {
                         <span style={{ fontSize: '24px' }}>✅</span>
                         <div>
                             <p style={{ fontWeight: '600', marginBottom: '4px' }}>윈들리 연동 활성화됨</p>
+                            <p style={{ fontSize: '14px', color: '#aaa', marginBottom: '4px' }}>
+                                윈들리 계정: <code style={{ background: '#333', padding: '2px 8px', borderRadius: '4px' }}>heonylee</code>
+                            </p>
                             <p style={{ fontSize: '14px', color: '#aaa' }}>
                                 판매자 ID: <code style={{ background: '#333', padding: '2px 8px', borderRadius: '4px' }}>ncp_i6wuhd_01</code>
                             </p>
@@ -337,6 +340,27 @@ export default function WindlyPage() {
                             <div>
                                 <p style={{ fontWeight: '600' }}>API 설정</p>
                                 <p style={{ fontSize: '12px', color: '#888' }}>직접 연동 설정</p>
+                            </div>
+                        </Link>
+
+                        <Link
+                            href="/admin/products/new"
+                            style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '12px',
+                                background: 'rgba(168, 85, 247, 0.1)',
+                                border: '1px solid rgba(168, 85, 247, 0.3)',
+                                padding: '16px',
+                                borderRadius: '12px',
+                                textDecoration: 'none',
+                                color: 'white',
+                            }}
+                        >
+                            <span style={{ fontSize: '24px' }}>➕</span>
+                            <div>
+                                <p style={{ fontWeight: '600' }}>새 상품 추가</p>
+                                <p style={{ fontSize: '12px', color: '#888' }}>상품 직접 등록</p>
                             </div>
                         </Link>
                     </div>
