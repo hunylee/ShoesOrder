@@ -41,7 +41,7 @@ export class BaseCrawler {
     }
 }
 
-// 라쿠텐 크롤러
+// Rakuten Crawler
 export class RakutenCrawler extends BaseCrawler {
     private baseUrl = 'https://search.rakuten.co.jp/search/mall/';
 
@@ -56,22 +56,22 @@ export class RakutenCrawler extends BaseCrawler {
             await this.page.goto(searchUrl, { waitUntil: 'domcontentloaded' });
             await this.delay(2000);
 
-            // 상품 목록 추출
+            // Product List Extraction
             const items = await this.page.$$('.searchresultitem');
 
-            for (const item of items.slice(0, 20)) { // 최대 20개
+            for (const item of items.slice(0, 20)) { // Max 20
                 try {
-                    const nameEl = await item.$('.title a');
-                    const priceEl = await item.$('.important');
-                    const imageEl = await item.$('img');
-                    const linkEl = await item.$('.title a');
+                    const nameEl = await item.$('.title-link--3Yuev');
+                    const priceEl = await item.$('.price-wrapper--10ccL');
+                    const imageEl = await item.$('.image-link-wrapper--3XCNg img');
+                    const linkEl = await item.$('.title-link--3Yuev');
 
                     const name = await nameEl?.textContent() || '';
                     const priceText = await priceEl?.textContent() || '0';
                     const imageUrl = await imageEl?.getAttribute('src') || '';
                     const sourceUrl = await linkEl?.getAttribute('href') || '';
 
-                    // 가격 파싱 (숫자만 추출)
+                    // Price parsing
                     const priceJpy = parseInt(priceText.replace(/[^0-9]/g, '')) || 0;
 
                     if (name && priceJpy > 0) {
@@ -98,7 +98,7 @@ export class RakutenCrawler extends BaseCrawler {
     }
 }
 
-// 야후재팬 크롤러
+// Yahoo Japan Crawler
 export class YahooCrawler extends BaseCrawler {
     private baseUrl = 'https://shopping.yahoo.co.jp/search?p=';
 
@@ -113,7 +113,7 @@ export class YahooCrawler extends BaseCrawler {
             await this.page.goto(searchUrl, { waitUntil: 'domcontentloaded' });
             await this.delay(2000);
 
-            // 상품 목록 추출 (Yahoo Shopping의 CSS는 자주 변경됨)
+            // Selectors might need update too, but keeping existing for now or until tested
             const items = await this.page.$$('[data-product-id]');
 
             for (const item of items.slice(0, 20)) {
@@ -153,7 +153,7 @@ export class YahooCrawler extends BaseCrawler {
     }
 }
 
-// 아마존재팬 크롤러
+// Amazon Japan Crawler
 export class AmazonCrawler extends BaseCrawler {
     private baseUrl = 'https://www.amazon.co.jp/s?k=';
 
@@ -168,18 +168,24 @@ export class AmazonCrawler extends BaseCrawler {
             await this.page.goto(searchUrl, { waitUntil: 'domcontentloaded' });
             await this.delay(2000);
 
-            // 상품 목록 추출
+            // Product List Extraction
             const items = await this.page.$$('[data-component-type="s-search-result"]');
 
             for (const item of items.slice(0, 20)) {
                 try {
-                    const nameEl = await item.$('h2 a span');
-                    const priceWholeEl = await item.$('.a-price-whole');
+                    const nameEl = await item.$('h2 span');
+                    const priceEl = await item.$('.a-price .a-offscreen');
                     const imageEl = await item.$('.s-image');
                     const linkEl = await item.$('h2 a');
 
                     const name = await nameEl?.textContent() || '';
-                    const priceText = await priceWholeEl?.textContent() || '0';
+                    // Fallback to whole price if offscreen not found
+                    let priceText = await priceEl?.textContent() || '';
+                    if (!priceText) {
+                        const priceWholeEl = await item.$('.a-price-whole');
+                        priceText = await priceWholeEl?.textContent() || '0';
+                    }
+
                     const imageUrl = await imageEl?.getAttribute('src') || '';
                     const href = await linkEl?.getAttribute('href') || '';
                     const sourceUrl = href.startsWith('http') ? href : `https://www.amazon.co.jp${href}`;
