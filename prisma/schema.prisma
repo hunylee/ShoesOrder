@@ -2,11 +2,13 @@
 // 일본 러닝화 해외 구매 대행 플랫폼
 
 generator client {
-  provider = "prisma-client-js"
+  provider   = "prisma-client-js"
+  engineType = "library"
 }
 
 datasource db {
   provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
 // 상품 모델

@@ -100,7 +100,10 @@ export default function WindlyPage() {
                         <div>
                             <p style={{ fontWeight: '600', marginBottom: '4px' }}>윈들리 연동 활성화됨</p>
                             <p style={{ fontSize: '14px', color: '#aaa', marginBottom: '4px' }}>
-                                윈들리 계정: <code style={{ background: '#333', padding: '2px 8px', borderRadius: '4px' }}>heonylee</code>
+                                로그인 방식: <code style={{ background: '#333', padding: '2px 8px', borderRadius: '4px' }}>네이버 연동</code>
+                            </p>
+                            <p style={{ fontSize: '14px', color: '#aaa', marginBottom: '4px' }}>
+                                네이버 계정: <code style={{ background: '#333', padding: '2px 8px', borderRadius: '4px' }}>hunylee@naver.com</code>
                             </p>
                             <p style={{ fontSize: '14px', color: '#aaa' }}>
                                 판매자 ID: <code style={{ background: '#333', padding: '2px 8px', borderRadius: '4px' }}>ncp_i6wuhd_01</code>
